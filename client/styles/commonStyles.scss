@@ -1,0 +1,10 @@
+$globalHeight: 100%;
+$globalMargin: 0;
+$globalWidth: 100%;
+
+
+html, body {
+    margin: $globalMargin;
+    height: $globalHeight;
+    min-width: $globalWidth;
+}
