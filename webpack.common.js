@@ -1,4 +1,5 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -21,5 +22,8 @@ module.exports = {
       { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader'}
     ]
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    HtmlWebpackPluginConfig
+  ]
 };
